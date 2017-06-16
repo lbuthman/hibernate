@@ -1,1 +1,34 @@
+- Persistence -> normally means storing data in a relational database using SQL
 
+- SQL book recommendations -> "SQL Tuning" and "An Introduction to Database Systems"
+
+- In OOP - persistence allows an object to out live the process that created it. It can be stored to disk and re-created
+as needed.
+
+- Transient objects have a limited lifespan, in contrast to persistent objects.
+
+- A broader view of persistence includes
+  -> storage, organization, and retrieval of structured data
+  -> concurrency and data integrity
+  -> data sharing
+  
+- Granularity problems mean persisting objects that can have various kinds of granularity to tables and columns that are
+inherently limited in granularity.
+
+- A surrogate key is a primary key column with no meaning to the user. This appears to just be the id (key) field.
+
+- Classes are typically organized by concern: persistence, presentation, workflow, business logic, etc. These concers are
+typically organized by layers, layered system architecture.
+
+- Layers communicate top to bottom, being dependent only on the layer directly below it. Each layer is unaware of every
+layer except the one below it.
+
+- ORM (object/relational mapping) is the automated (and transparent) persistence of objects in a Java application to the
+tables in a relational database, using metadata that describes the mapping.
+
+- An ORM solution consists of four pieces:
+  1) An API for basic CRUD on objects of persistent classes.
+  2) A language or API for specifying queries on classes and class properties.
+  3) A facility for spceifying mapping metadata.
+  4) A technique for the ORM implementation to interact with transactional objects to perform dirty checking, lazy
+  association fetching, and other optimization functions.
