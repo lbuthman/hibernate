@@ -27,3 +27,17 @@ callbacks but doesn't force persistent classes to implement Hibernate-specific A
 
 - Type object -> maps a Java type to a database column type; rich range of types covering all Java primitives and many
 JDK classes, as well as custom types (UserType and CompositeUserType interfaces)
+
+- Managed environments -> pools resources such as database connections and allows transaction boundaries & security to
+be specified declaratively (in meta-data). A J2EE application server implements the standard managed environment.
+
+- Non-Managed environments -> don't provide automatic transaction or resource management or security infrastructure. The
+application itself manages database connections and demarcates transaction boundaries.
+
+- The following sudo-code starts Hibernate
+  //instantiate the Configuration class
+  //call addResource() with xml config path
+  //call setProperties() with System.getProperties()
+  //instantiate SessionFactory by calling Config instance buildSessionFactory()
+  
+- By convention, Hibernate XML's are named with .hmb.xml extensions.
